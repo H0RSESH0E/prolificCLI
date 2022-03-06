@@ -30,7 +30,6 @@ const emailAddress = (address) => {
 }
 
 const makeManager = (roster) => {
-    // console.table(roster);
     const Manager = roster.filter(function (element) {
         return (element.role === 'Manager');
     });
@@ -38,7 +37,6 @@ const makeManager = (roster) => {
 };
 
 const makeEngineers = (roster) => {
-    // console.table(roster);
     const Engineers = roster.filter(function (element) {
         return (element.role === 'Engineer');
     });
@@ -47,7 +45,6 @@ const makeEngineers = (roster) => {
 
 
 const makeInterns = (roster) => {
-    // console.table(roster);
     const Interns = roster.filter(function (element) {
         return (element.role === 'Intern');
     });
@@ -63,7 +60,6 @@ const cardMaker = (array) => {
     if (array.length === 0) {
         return ``;
     }
-    console.table(array);
     const pic = getPic(array[0].role);
 
     for (var i = 0; i < array.length; i++) {
@@ -92,9 +88,9 @@ const htmlAssembler = (roster) => {
     const engArr = makeEngineers(roster);
     const intArr = makeInterns(roster);
 
-    console.log(manArr);
-    console.log(engArr);
-    console.log(intArr);
+    // console.log(manArr);
+    // console.log(engArr);
+    // console.log(intArr);
 
 
     return `

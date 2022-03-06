@@ -14,13 +14,13 @@ const getPic = (role) => {
 }
 
 const variantInfo = (employee) => {
-    switch (employee.getRole()) {
+    switch (employee.role) {
         case "Manager":
-            return `Office Number: <br> ${employee.getOfficeNumber()}`;
+            return `Office Number: <br> ${employee.officeNumber}`;
         case "Engineer":
-            return `Github Username: <br><a href="https://github.com/${employee.getGithub()}" target="_blank"> ${employee.getGithub()}</a>`;
+            return `Github Username: <br><a href="https://github.com/${employee.github}" target="_blank"> ${employee.github}</a>`;
         case "Intern":
-            return `School: <br> ${employee.getSchool()}`;
+            return `School: <br> ${employee.school}`;
     }
 }
 
@@ -66,14 +66,14 @@ const cardMaker = (array) => {
         collectCards += `
     <div class="card" style="width: 16rem;">
     <div class="card-styling">
-    <img class="card-img-top" src="${pic}" alt="${array[i].getRole()}">
-    <div class="role-title">${array[i].getRole()}</div>
+    <img class="card-img-top" src="${pic}" alt="${array[i].role}">
+    <div class="role-title">${array[i].role}</div>
     </div>
     <div class="card-body">
-        <h5 class="card-title">${array[i].getName()}</h5>
-        <p class="card-text">Employee Number:<br> ${array[i].getId()}</p>
+        <h5 class="card-title">${array[i].name}</h5>
+        <p class="card-text">Employee Number:<br> ${array[i].id}</p>
         <p class="card-text">${variantInfo(array[i])}</p>
-        <a href="mailto:${array[i].getEmail()}">${array[i].getEmail()}</a>
+        <a href="mailto:${array[i].email}">${array[i].email}</a>
     </div>
     </div>
 `;
@@ -104,7 +104,7 @@ const htmlAssembler = (roster) => {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>${manArr[0].getName()}'s Team Profile</title>
+    <title>${manArr[0].name}'s Team Profile</title>
     <meta name="description"
         content="A CLI profile generator that builds an attractive dashboard display.">
 </head>
@@ -114,7 +114,7 @@ const htmlAssembler = (roster) => {
         <div class="row d-flex align-items-center" id="header-row">
 
             <header class="col-11 d-flex justify-content-center">
-                <h1 class="blend-mode">${manArr[0].getName()}'s Team</h1>
+                <h1 class="blend-mode">${manArr[0].name}'s Team</h1>
             </header>
             <div class="col-1 d-flex justify-content-end">
                 <img src="./assets/images/toroid.png"

@@ -11,7 +11,7 @@ const writeFile = (fileName, fileContent) => {
   
         resolve({
           ok: true,
-          message: `${fileName} was created and saved to this folder.`
+          message: `${fileName} was created.`
         });
       });
     });

@@ -1,0 +1,254 @@
+:root {
+
+    /*Fonts*/
+    --1-headline-font: cache;
+    --font: avenir;
+    --fontSize: 1rem;
+    --font-color: rgb(4, 4, 71);
+    --shadow: 2px 2px 4px #0f1031, 2px 2px 6px #0f116483, 2px 2px 7px #151ce09f;
+
+    /* Backgrounds and borders */
+    --glass: #ffffff31;
+
+    /* UV Index Colours */
+    --uvLow: #289500;
+    --uvMod: #F7E400;
+    --uvHigh: #F85900;
+    --uvVHigh: #D80010;
+    --uvExt: #6B49C8;
+}
+
+@font-face {
+    font-family: 'avenir';
+    src: url('./AvenirLTStd-Roman.otf');
+}
+
+
+/* * {
+    border: 1px dotted yellow;
+} */
+html,
+body {
+    height: 100vh;
+    scroll-behavior: smooth;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--font);
+    font-size: var(--fontSize);
+    color: var(--font-color);
+}    
+
+#background {
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-size: cover; 
+    background-repeat: repeat-y;
+}
+#header-row {
+    height: 8%;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+h1 {
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow: var(--shadow);
+}
+
+#body-row {
+    height: 92%;
+    width: 100%;
+}
+
+header,
+.five-day {
+    text-align:  center;
+}
+
+#header-row div img {
+    height: 5vh;
+    filter: opacity(1);
+}
+
+.card {
+    margin: 1rem;
+}
+.card-img-top {
+    max-height: 6rem;
+    object-fit: fill;
+}
+.card-styling{
+    position: relative;
+}
+.role-title {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: -18px;
+    left: 4px;
+    font-size: 1.6rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.card-title {
+    font-size: 1rem;
+}
+
+.card-text {
+    font-size: .6rem;
+}
+
+
+
+
+#search-form {
+    min-height: 95%;
+}
+
+#search-history-container {
+    height: auto;
+}
+
+#cityToSearch {
+    width: 95%;
+    height: 5vh;
+    margin: 0 auto;
+}
+
+.horiz-border {
+    border: 1px solid var(--glass);
+    margin: 1vh 0;
+}
+
+
+.uv-icon {
+    border-radius: 5px;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.uv-icon.low {
+    color: #fff;
+    background-color: var(--uvLow);
+}
+
+.uv-icon.mod {
+    color: rgb(0, 0, 0);
+    background-color: var(--uvMod);
+}
+
+.uv-icon.high {
+    color: rgb(0, 0, 0);
+    background-color: var(--uvHigh);
+}
+
+.uv-icon.vHigh {
+    color: #fff;
+    background-color: var(--uvVHigh);
+}
+
+.uv-icon.ext {
+    color: #fff;
+    background-color: var(--uvExt);
+}
+
+label {
+    align-self: center;
+}
+
+input {
+    text-align: center;
+    padding: 2.5vh;
+}
+
+.current-weather-icon {
+    height: 4rem;
+}
+
+.daily-card,
+.btn  {
+    margin: 1.2vh 0.5vw;
+}
+
+.daily-card {
+    font-size: 110%;
+    padding: 1vh 1vw;
+}
+
+#search-form {
+    margin: 0vw;
+    padding: 0.2vw;
+}
+
+#header-row {    
+    background-color: var(--glass);
+    backdrop-filter: blur(8px);
+}
+
+.five-day,
+.btn,
+#cityToSearch {
+    border-radius: 1vw;
+    background-color: var(--glass);
+    backdrop-filter: blur(8px);
+
+}
+
+#search-form {
+    border-radius: 1vw;
+    backdrop-filter: blur(8px);
+    background-image: linear-gradient(110deg, #ffffffa6,  rgba(0, 0, 255, 0) );
+}
+
+.current-c,
+.daily-card {
+    border-radius: 1vw;
+    backdrop-filter: blur(6px);
+    background-image: linear-gradient(155deg, #ffffff,  rgba(0, 0, 255, 0) );
+}
+
+#submitButton {
+    background-color: rgba(0, 68, 214, 0.473);
+}
+
+#search-form,
+.five-day {
+    backdrop-filter: blur(10px); 
+}
+
+#five-day-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between !important;
+}
+
+                                        /* RESPONSIVE STYLING */
+
+@media (max-width: 450px) {
+  
+ :root {
+    --fontSize: 1.1rem;
+ }
+
+}
+
+@media (max-width: 780px)  {
+    :root {
+        --fontSize: 1.4rem;
+     }
+
+     .current-c {
+         display: flex;
+         flex-direction: column;
+        align-items: center;
+     }
+    }
+
+@media (max-width: 1000px)  {
+    :root {
+        --fontSize: 1.2em;
+     }
+}

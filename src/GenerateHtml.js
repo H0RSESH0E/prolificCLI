@@ -1,4 +1,4 @@
-
+// Returns a picture appropriate to the role
 const getPic = (role) => {
     const manPic = `https://c.pxhere.com/images/b4/0a/c3912017a6eb6a6cbcab1c41fe82-1450985.jpg!d`
     const engPic = `https://c.pxhere.com/images/ab/43/81d9690e47183ee54a9ef236f9a4-1446017.jpg!d`
@@ -13,6 +13,7 @@ const getPic = (role) => {
     };
 }
 
+// This function returns the information which varries by role
 const variantInfo = (employee) => {
     switch (employee.role) {
         case "Manager":
@@ -24,11 +25,7 @@ const variantInfo = (employee) => {
     }
 }
 
-const emailAddress = (address) => {
-
-    return ``
-}
-
+// These three functions make the subset arrays according to employee role
 const makeManager = (roster) => {
     const Manager = roster.filter(function (element) {
         return (element.role === 'Manager');
@@ -43,7 +40,6 @@ const makeEngineers = (roster) => {
     return Engineers;
 };
 
-
 const makeInterns = (roster) => {
     const Interns = roster.filter(function (element) {
         return (element.role === 'Intern');
@@ -51,10 +47,7 @@ const makeInterns = (roster) => {
     return Interns;
 };
 
-
-
-// Variable size team assemblers
-
+// Card assembler
 const cardMaker = (array) => {
     var collectCards = "";
     if (array.length === 0) {
@@ -84,14 +77,11 @@ const cardMaker = (array) => {
 
 // Main html assembler
 const htmlAssembler = (roster) => {
+
+    // splits the team info for placement into the html
     const manArr = makeManager(roster);
     const engArr = makeEngineers(roster);
     const intArr = makeInterns(roster);
-
-    // console.log(manArr);
-    // console.log(engArr);
-    // console.log(intArr);
-
 
     return `
     <!DOCTYPE html>

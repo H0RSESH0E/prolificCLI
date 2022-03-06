@@ -10,8 +10,10 @@
 ## Description  
 Harnessing the efficiency and power of the command line interface, Prolific CLI is a team profile generator which provides a quick visual breakdown of a manager's team.  After starting the application, the user will be prompted to enter their own (the manager's) information and the information of their team members that is specific to their particular roles.  Please click on the link below to view a walkthrough video of this applications functionality.  
 &nbsp;  
-<img src="./assets/images/screenshot.png" alt="Prolific CLI application screenshot" width="600"/>    
+<img src="./dist/assets/images/screenshot.png" alt="Prolific CLI application screenshot" width="600"/>    
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)   
+&nbsp;  
+[Watch the Walkthrough Demonstration](https://drive.google.com/file/d/1N2z6i8kRfpgVcXbSfCy4zG0zbMA-hmi7/view)  
 &nbsp;  
 ## Installation
 This application must be run with Node.js and requires installation of packages which must be downloaded and installed from npm.  After copying the application files into a folder, initializing it and installing the dependencies that are required, please type 'node index' at the command prompt.  

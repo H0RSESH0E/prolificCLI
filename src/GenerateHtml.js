@@ -96,7 +96,7 @@ const htmlAssembler = (roster) => {
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>${manArr[0].name}'s Team Profile</title>
     <meta name="description"
-        content="A CLI profile generator that builds an attractive dashboard display.">
+        content="A CLI team profile generator that builds an attractive dashboard display.">
 </head>
 <body>
     <div id="background" class="whole-page container-fluid">
@@ -131,10 +131,6 @@ const htmlAssembler = (roster) => {
     ${cardMaker(intArr)}
         </div>
 
-    </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-        <script src="./assets/js/script.js"></script>
-    </div>
 </body>
 
 </html>
